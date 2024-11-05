@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+
+        $(function(){
+        
+        $("#btn1").click(function(){
+            $('html, body').animate({
+                    scrollTop: $(".str_glow2").offset().top
+                }, 1200);
+        })
+
+        $("#btn2").click(function(){
+            $('html, body').animate({
+                    scrollTop: $(".str_glow3").offset().top
+                }, 1200);
+        })
+
+        $(window).scroll(function(){
+           if( $(window).scrollTop() > 0 ){
+            $(".powrotnagore").css({
+                opacity:1,
+                cursor:"pointer"
+            })
+           }
+           else{
+            $(".powrotnagore").css({
+                opacity:0,
+                cursor:"default"
+            })
+            }
+        })
+
+        $(".powrotnagore").click(function(){
+            $('html, body').animate({
+                    scrollTop: 0
+                }, 1200);
+        })
+           
+        })
+
+
+    </script>
+
+
+    <style>
+        body{
+            background-color: #000000;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cc0000' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23aa0000' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23c50022' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23a3001b' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23be0044' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%239c0036' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23b80066' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23960052' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23b10088' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%238f006d' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aa00aa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23880088' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: Helvetica, sans-serif;
+            height: 2600px;
+            line-height: 1.5;
+            margin: 0; 
+            padding: 0; 
+           
+        }
+        .str_glow{
+            display: flex;
+            flex-direction: column;
+            color: white;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            height:800PX;
+            padding: 80px 0 80px 0;
+
+        }
+
+        .btn{
+            width: 12em;
+            height: 50px;
+            background-color: #cc0000;
+            border-radius: 12px;
+            padding: 5px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            margin: 20px;
+            text-decoration: none;
+            box-sizing: border-box;
+            transition:  box-shadow 0.2s linear;
+            transition: transform 0.2s linear;
+            border: solid 2px;
+            
+            
+        }
+        .btn:hover{
+            box-shadow:   inset 5px 5px  #680404;
+            transform: translateY(-2px);
+            transition:  box-shadow 0.2s linear;
+            transition: transform 0.2s linear;
+            cursor: pointer;
+           
+        }
+        .nawigacja{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+         
+        }
+
+        .txt_glowny {
+        font-size: 5em;
+        display: inline-block;
+        animation: animtext 3s ease-in-out infinite;
+        text-decoration: underline #60044c;
+        /* margin-top:-400px ; */
+        transition: ease all .2s;
+    }
+
+        .str_glow2{
+            display: flex;
+            flex-direction: row;
+            color: white;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            height: 800px;
+            backdrop-filter: blur(10px);
+            
+        }
+
+        .glow_prawo{
+            height: 100%;
+            width: 30%;
+            display: flex;
+            flex-direction:column ;
+            /* transform:  translate(-80px, 0px) skew(14deg, 0deg); */
+
+        }
+        .glow_lewo{
+            height: 100%;
+            width: 30%;
+        
+            
+        }
+        .txt_nag{
+            font-size: 3em;
+            transition: ease all .5s;
+        }
+        .text{
+            font-size: 1.2em;
+            width: 50%;
+            transition: ease all .5s;
+        }
+        .blok_text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80%;
+            
+        }
+        .boki{
+            width: 20%;
+            transition: ease all .5s;
+        }
+        hr{
+            width: 40%;
+            height: 5px;
+            background-color: #60044c;
+            border-radius: 5px;
+            color: #60044c;
+            height: 5px;
+            margin-top: -40px ;
+            margin-bottom: 20px;
+        }
+        .blok{
+            width: 150px;
+            height: 70px;
+            background-color: #960052;
+            border-radius: 7px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            border: 2px solid;
+            transition: transform 0.2s linear;
+            transition: ease all .5s;
+        }
+        .blok:hover{
+            transform: rotate(4deg);
+        }
+        .blok_text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80%;
+        }
+        .blok_blk{
+            margin-top: 23%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .blok_rzad{
+            display: flex;
+            flex-direction: row;
+        }
+        .str_glow3{
+            display: flex;
+            flex-direction: column;
+            color: white;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            height:1100PX;
+            margin-top: 20%;
+            
+        }
+        .proj_text{
+            display: flex;
+            flex-direction: column;
+            color: white;
+            justify-content: center;
+            text-align: center;
+            width: 30%;
+            height: 100%;
+            background-color: rgba(184,0,102,0.5);
+            transform: skew(12deg);
+            box-sizing: border-box;
+            border: solid 5px white;
+            transition: transform 0.5s ease-in-out;
+        }
+        .proj_text p{
+            transform: skew(-12deg);
+        }
+        .proj_zdj{
+            display: flex;
+            flex-direction: column;
+            color: white;
+            justify-content: center;
+            text-align: center;
+            width: 30%;
+            height: 100%;
+            /* background-color: green; */
+            transform: skew(12deg);
+           overflow: hidden;
+           transition: transform 0.5s ease-in-out;
+
+
+        }
+
+    
+        
+        .proj_zdj a{
+            transform: skew(-12deg) ;
+            width: 200px;
+            height: 60px;
+            color: white;
+            background-color: #cc0000;
+            border-radius: 12px;
+            padding: 10px;
+            margin: 2%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            box-sizing: border-box;
+            transition:  box-shadow 0.2s linear;
+            transition: transform 0.2s linear;
+            border: solid 2px;
+            outline-color: none;
+        
+            
+            
+        }
+        .proj_zdj a:hover{
+            box-shadow:   inset 5px 5px  #680404;
+            transform: translateY(-2px) skew(-12deg);
+            transition:  box-shadow 0.2s linear;
+            transition: transform 0.2s linear;
+            cursor: pointer;
+            text-decoration: none;
+           
+        }
+        .boki2{
+            width: 20%;
+            transition: ease all .5s;
+          
+        }
+        .wrap{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+        }
+        section{
+            height: 33.3%;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        section img{
+            transform: skew(-12deg);
+            margin: 3%;
+            overflow: hidden;
+            object-fit: cover;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+            border:  solid 3px;
+        }
+        h1{
+            transform: skew(-12deg);
+        }
+        .powrotnagore{
+            height: 40px;
+            width: 140px;
+            background-color: aqua;
+            position: fixed;
+            bottom: 10%;
+            right: 2%;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity .5s ease-in-out, width 0.5s ease-in-out, height ease-in-out 0.5s;
+            border-radius: 20px;
+            transform: rotate(-90deg);
+            cursor:default;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            border: solid 2px white;
+            background-color: gray;
+            
+         
+        }
+        .stopka{
+            width: 100%;
+            height: 100px;
+            color: white;
+            box-sizing: border-box;
+            margin-top: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .stopka_cont{
+            width: 60%;
+            height: 80px;
+            color: white;
+            border: solid 3px white;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+        .stopka_cont p{
+            margin: 10px;
+
+        }
+        .stopka_cont img{
+            max-width: 20%;
+            max-height: 20%;
+            margin: 10px;
+        }
+
+
+@keyframes animtext {
+    0%,60%, 100% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-16%);
+    }
+    30% {
+        transform: translateY(8%);
+    }
+    40% {
+        transform: translateY(-8%);
+    }
+    50% {
+        transform: translateY(4%);
+    }
+}
+@media only screen and (max-width: 1100px) {
+
+    .text{
+        font-size: 1.05em;
+        margin: 5px;
+    }
+    .boki{
+        width: 10%;
+    }
+
+    .glow_prawo{
+
+            width: 40%;
+
+
+        }
+        .glow_lewo{
+
+            width: 40%;
+        
+            
+        }
+        .proj_text p{
+            font-size: 0.8em;
+        }
+
+       
+      
+
+}
+
+@media only screen and (max-width: 600px) {
+    .blok{
+        width: 70px;
+        height: 90px;
+        font-size: 0.8em;
+        transition: ease all .5s;
+    }
+
+    .text{
+        font-size: 0.9em;
+        margin: 5px;
+    }
+    .txt_glowny{
+        font-size: 4em;
+    }
+    .txt_nag{
+        font-size: 2em;
+    }
+    .powrotnagore{
+            height: 30px;
+            width: 70px;
+            font-size: 0.7em;
+        }
+
+    .boki2{
+        width: 10%;
+    }
+    .proj_text{
+        width: 40%;
+        transform: skew(-0deg);
+        transition: transform 0.5s ease-in-out;
+    }
+    .proj_zdj{
+        width: 40%;
+        transform: skew(0deg);
+        transition: transform 0.5s ease-in-out;
+    }
+    .proj_zdj a{
+           transform: skew(0);
+           width: 100px;
+           height: 30px;
+           font-size: 0.7em
+        
+        }
+        .proj_text p{
+            transform: skew(0);
+        }
+        .proj_zdj a:hover{
+            transform: translateY(-2px) skew(0);
+    
+           
+        }
+        .stopka_cont{
+            width: 80%;
+            font-size: 0.8em;
+        }
+        
+}
+
+
+            
+
+    </style>
+</head>
+<body>
+    <div class="powrotnagore">Do góry</div>
+    <div class="str_glow">
+        <p class="txt_glowny">Cześć, nazywam sie Jan!</p>
+
+        <p>-Zafascynowany Pythonem </p>
+
+        <nav class="nawigacja">
+            <a class="btn" id="btn1">O mnie </a>
+
+            <a class="btn" id="btn2">Projekty</a>
+        </nav>
+
+    </div>
+
+    <div class="str_glow2">
+        <div class="boki"></div>
+
+        <div class="glow_prawo">
+            
+            <p class="txt_nag"> Coś o mnie</p>
+            <hr>
+            <h2 > Czyli kim jestem i co robie?</h2>
+            <div class="blok_text">
+
+            <p class="text">Nazwyam się Jan Polak i mam 18 lat, interesuje sie programowaniem i backendem. Moimm ulubionym językiem programowania jest python. </p>
+            <p class="text">Narazie zajmuje się szkołą, a w wolnym czasie próbuje swoich sił w mniejszych projektach</p>
+            <p class="text">Programowanie jest moim zainteresowaniem, ale to czas pokaże czy to hobby zamieni się kiedyś w prace</p>
+
+            </div>
+        </div>
+        <div class="glow_lewo">
+
+            <p class="txt_nag">Czego się ucze</p>
+            <hr>
+            <div class="blok_blk">
+
+                <div class="blok_rzad">
+
+                <p class="blok">HTML</p>
+                <p class="blok">CSS</p>
+
+            </div>
+            <div class="blok_rzad">
+
+                <p class="blok"> JavaScript</p>
+                <p class="blok">python</p>
+
+            </div>
+                <div class="blok_rzad">
+
+                <p class="blok">PHP</p>
+                <p class="blok">JQuery</p>
+
+            </div>
+                <div class="blok_rzad">
+
+                <p class="blok">Wordpress</p>
+                <p class="blok">GIT</p>
+
+            </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="boki"></div>
+
+    </div>
+
+    <div class="str_glow3">
+        <p class="txt_nag">Moje przykładowe Projekty</p>
+        <hr>
+        <div class="wrap">
+
+        <div class="boki2"></div>
+
+            <div class="proj_text">
+
+                <section>
+                    <h1>Wyszukiwarka krajów</h1>
+                    <p class="text">Wyszukiwarka krajów, która korzysta z API, dzieki której możemy sie dowiedzieć o populacji i stolicy danego kraju oraz poznac jego flagę</p>
+                </section>
+                <section>
+                    <h1>Zegar</h1>
+                    <p class="text">Proste zegary, jeden zwyczajny drugi elektroniczny. Wykorzystuje on JavaScripta oraz animacje w css</p>
+                </section>
+                <section>
+                    <h1>BlackJack</h1>
+                    <p class="text">Prosta gra w Blackjacka stworzona w terminalu, zawiera system zakładania się o fikcyjne pieniądze</p>
+                </section>
+
+
+            </div>
+            <div class="proj_zdj">
+                <section> 
+                    <img src="kraje.png">
+                    <a download href="kraje.png">Pobierz Kraje</a>
+                </section>
+                <section> 
+                <img src="zegar.png">
+                <a download href="zegar.zip">Pobierz Zegar</a>
+            </section>
+            <section> 
+                <img src="bj.jpg">
+                <a download href="blackjack.py">Pobierz BlackJacka</a>
+            </section>
+
+            </div>
+
+
+        <div class="boki2"></div>
+    </div>
+
+    </div>
+
+    <div class="stopka">
+        <div class="boki2"></div>
+        <div class="stopka_cont">
+
+            <p>Zrobione przez Jana Polaka </p> 
+            <a href="https://github.com/jamosik" target="_blank"><img src="github-mark-white.png"></a>
+            <p>w roku 2024</p>
+</div>
+
+         <div class="boki2"></div>
+</div>
+
+
+    
+   
+</body>
+</html>
